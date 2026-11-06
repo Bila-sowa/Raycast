@@ -1,0 +1,43 @@
+{
+  "name": "Raycast",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "compile": "sass src/styles.scss src/styles.css",
+    "deploy": "gh-pages -d dist",
+    "ES:check": "npx eslint src tests eslint.config.js .stylelintrc.mjs vite.config.js",
+    "ES:fix": "npx eslint src tests eslint.config.js .stylelintrc.mjs vite.config.js --fix",
+    "style:check": "stylelint \"**/*.scss\"",
+    "style:fix": "stylelint \"**/*.scss\" --fix",
+    "prettier": "prettier ./ --write",
+    "check:all": "npm-run-all --continue-on-error ES:check style:check",
+    "fix:all": "npm-run-all --continue-on-error ES:fix style:fix prettier"
+  },
+  "dependencies": {
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "eslint": "^10.14.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.7",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.7",
+    "gh-pages": "^6.3.0",
+    "globals": "^17.13.0",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.108.0",
+    "stylelint": "^18.0.0",
+    "stylelint-config-standard": "^41.0.0",
+    "stylelint-config-standard-scss": "^17.0.0",
+    "vite": "^8.3.6"
+  }
+}

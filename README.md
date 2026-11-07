@@ -8,7 +8,7 @@
 Raycast is a blazingly fast, totally extendable launcher. It lets you
 complete tasks, calculate, share common links, and much more.
 
-> [!Info]
+> [!NOTE]
 > This site is only a visual mockup and does not have any practical functionality.
 
 ## Demo

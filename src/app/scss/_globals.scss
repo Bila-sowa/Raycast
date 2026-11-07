@@ -1,0 +1,56 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+button {
+  background: none;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  color: var(--text-dark-color);
+}
+
+body {
+  font-family: var(--font-inter);
+  color: var(--text-light-color);
+  background: var(--bg-color);
+  padding: 0 20px;
+}
+
+h1 {
+  font-size: 2.8125rem;
+  line-height: 1.1;
+  letter-spacing: -1.8px;
+}
+
+h2 {
+  font-size: 2.125rem;
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+a {
+  font-size: 0.9375rem;
+}
+
+p {
+  line-height: 1.5;
+  letter-spacing: -0.2px;
+}
+
+code {
+  font-size: 0.8125rem;
+  line-height: 0.2;
+}

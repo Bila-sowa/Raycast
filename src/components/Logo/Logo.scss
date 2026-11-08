@@ -1,5 +1,7 @@
-div {
+a {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 5px;
+  z-index: 3;
 }

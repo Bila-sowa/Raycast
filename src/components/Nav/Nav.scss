@@ -1,0 +1,29 @@
+nav {
+  position: relative;
+  display: flex;
+  gap: 32px;
+  height: fit-content;
+  max-width: 100%;
+  z-index: 2;
+
+  div {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    a {
+      opacity: var(--font-opacity);
+    }
+
+    .badge {
+      background: linear-gradient(90deg, #ff5b37 1%, #ab0052 100%);
+      padding: 1px 6px;
+      border-radius: 10px;
+
+      span {
+        font-size: 0.8125rem;
+        opacity: var(--font-opacity);
+      }
+    }
+  }
+}

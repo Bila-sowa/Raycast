@@ -6,19 +6,20 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: var(--font-inter);
+  color: var(--text-light-color);
+  background: var(--bg-color);
+  padding: 0 20px;
+}
+
 button {
   background: none;
   border: none;
   outline: none;
   border-radius: 8px;
   color: var(--text-dark-color);
-}
-
-body {
-  font-family: var(--font-inter);
-  color: var(--text-light-color);
-  background: var(--bg-color);
-  padding: 0 20px;
+  cursor: pointer;
 }
 
 h1 {
@@ -41,13 +42,14 @@ h4 {
   font-size: 1.25rem;
 }
 
-a {
-  font-size: 0.9375rem;
-}
-
 p {
   line-height: 1.5;
   letter-spacing: -0.2px;
+}
+
+a {
+  cursor: pointer;
+  letter-spacing: 0.2px;
 }
 
 code {

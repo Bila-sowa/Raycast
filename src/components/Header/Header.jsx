@@ -1,10 +1,15 @@
 import Logo from '../Logo'
-import styles from './Header.module.scss'
+import Nav from '../Nav'
+import BurgerMenu from '../BurgerMenu'
+import './Header.scss'
+import navButtons from '../../constants/navButtons'
 
 const Header = () => {
   return (
-    <header className={`${styles.header}`}>
+    <header>
       <Logo></Logo>
+      <Nav buttons={navButtons}></Nav>
+      <BurgerMenu></BurgerMenu>
     </header>
   )
 }

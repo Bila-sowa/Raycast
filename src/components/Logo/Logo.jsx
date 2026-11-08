@@ -1,9 +1,10 @@
-import styles from './Logo.module.scss'
+import './Logo.scss'
 
 const Logo = () => {
   return (
-    <div className={`${styles.div}`}>
+    <a href="#">
       <svg
+        aria-hidden="true"
         width="28"
         height="28"
         viewBox="0 0 28 28"
@@ -11,12 +12,13 @@ const Logo = () => {
         xmlns="http://www.w3.org/2000/svg">
         <path
           d="M7.00039 18.073V20.994L0 13.994L1.46008 12.534L7.00039 18.075V18.073ZM9.92155 20.994H7.00039L14.0008 27.994L15.4609 26.534L9.92155 20.994ZM26.5365 15.456L27.9976 13.994L13.9968 -0.00599289L12.5387 1.46001L18.078 6.99801H14.7308L10.8646 3.14001L9.40452 4.60001L11.8097 7.00401H10.1296V17.87H20.9952V16.19L23.4003 18.594L24.8604 17.134L20.9952 13.268V9.92101L26.5365 15.456ZM7.73043 6.27001L6.26535 7.73201L7.83344 9.29801L9.29452 7.83801L7.73043 6.27001ZM20.1631 18.702L18.703 20.164L20.2691 21.732L21.7312 20.27L20.1631 18.702ZM4.59626 9.40401L3.13417 10.866L7.00039 14.732V11.809L4.59626 9.40401ZM16.1929 21H13.2687L17.135 24.866L18.597 23.404L16.1929 21Z"
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           fill="#FF6363"
         />
       </svg>
       <svg
+        aria-hidden="true"
         width="72"
         height="18"
         viewBox="0 0 72 18"
@@ -27,7 +29,7 @@ const Logo = () => {
           fill="white"
         />
       </svg>
-    </div>
+    </a>
   )
 }
 

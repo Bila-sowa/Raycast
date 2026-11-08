@@ -1,0 +1,48 @@
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.burger-menu {
+  &-button {
+    @include flex-center;
+
+    position: relative;
+    height: 44px;
+    width: 44px;
+    gap: 4px;
+    z-index: 3;
+
+    &-wrapper {
+      @include flex-center;
+
+      flex-direction: column;
+      width: 24px;
+      height: 24px;
+      gap: 4px;
+
+      div {
+        background: var(--text-light-color);
+        width: 16px;
+        height: 2px;
+      }
+    }
+  }
+
+  &-content {
+    position: absolute;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: self-start;
+    gap: 16px;
+    inset: 0;
+    padding: 60px 30px;
+    min-height: 230px;
+    height: fit-content;
+    background: var(--bg-color);
+    z-index: 2;
+    box-shadow: 2px 2px 16px #000;
+    border-radius: 3px;
+  }
+}

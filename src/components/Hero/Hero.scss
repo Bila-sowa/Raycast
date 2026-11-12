@@ -1,0 +1,36 @@
+.hero {
+  padding-bottom: 32px;
+
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+    max-width: 100%;
+    height: 794px;
+    padding-top: 36px;
+    overflow: hidden;
+
+    img {
+      width: 350px;
+      height: 182px;
+    }
+
+    h1 {
+      text-align: center;
+
+      span {
+        background: linear-gradient(90deg, #f83a3a 10%, #f13dd4 50%, #7000ff 90%);
+        background-clip: text;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    p {
+      text-align: center;
+      opacity: var(--font-opacity);
+      font-size: 1.0625rem;
+    }
+  }
+}

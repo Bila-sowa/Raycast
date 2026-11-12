@@ -11,6 +11,25 @@ body {
   color: var(--text-light-color);
   background: var(--bg-color);
   padding: 0 20px;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('../../assets/atmosphere.png');
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    z-index: -1;
+    pointer-events: none;
+    mask-image: radial-gradient(
+      ellipse 70% 60% at 50% 30%,
+      black 15%,
+      rgb(0 0 0 / 60%) 45%,
+      transparent 75%
+    );
+  }
 }
 
 button {

@@ -1,7 +1,8 @@
-a {
+.logo {
   position: relative;
   display: flex;
   align-items: center;
   gap: 5px;
   z-index: 3;
+  font-weight: bold;
 }

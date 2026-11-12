@@ -1,9 +1,10 @@
 :root {
-  --font-inter: font-family: 'Inter', sans-serif;
-  --font-monospace: font-family: 'JetBrains Mono', monospace;
+  --font-inter: 'Inter', sans-serif;
+  --font-monospace: 'JetBrains Mono', monospace;
   --bg-color: #05010d;
   --text-light-color: #fff;
   --text-dark-color: #0d0d0d;
+  --text-medium-weight: 500;
   --font-opacity: 60%;
   --border-radius: 12px;
 }

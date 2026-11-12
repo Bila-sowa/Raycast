@@ -1,8 +1,13 @@
-import Hero from '@/components/Hero/Hero'
+import { AppProvider } from '@/context/appContext'
+import Hero from '@/components/Hero'
 import './styles.scss'
 
 const App = () => {
-  return <Hero></Hero>
+  return (
+    <AppProvider>
+      <Hero></Hero>
+    </AppProvider>
+  )
 }
 
 export default App

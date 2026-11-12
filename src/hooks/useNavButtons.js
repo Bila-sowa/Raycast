@@ -8,4 +8,12 @@ const navButtons = [
   { label: 'Blog', link: '#' },
 ]
 
-export default navButtons
+const useNavButtons = () => {
+  const getNavButtons = () => navButtons
+
+  return {
+    getNavButtons,
+  }
+}
+
+export default useNavButtons

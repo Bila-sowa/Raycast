@@ -2,7 +2,7 @@ import './Logo.scss'
 
 const Logo = () => {
   return (
-    <a href="#">
+    <a className="logo" href="#">
       <svg
         aria-hidden="true"
         width="28"

@@ -1,25 +1,18 @@
+import { useContext } from 'react'
+import { AppContext } from '@/context/appContext'
 import './Nav.scss'
+import NavButton from '../NavButton'
 
 const Nav = (props) => {
-  const { buttons } = props
+  const { className } = props
+  const { getNavButtons } = useContext(AppContext)
+  const buttons = getNavButtons()
   const isHasButtons = buttons?.length > 0 && Array.isArray(buttons)
+  const navClassName = ['nav', className].filter(Boolean).join(' ')
 
   return (
-    <nav>
-      {isHasButtons
-        ? buttons.map((btn) => (
-            <div>
-              <a href={btn.href}>{btn.label}</a>
-              {btn?.badge ? (
-                <div className="badge">
-                  <span>{btn.badge}</span>
-                </div>
-              ) : (
-                ''
-              )}
-            </div>
-          ))
-        : ''}
+    <nav className={navClassName}>
+      {isHasButtons ? buttons.map((btn) => <NavButton key={btn.label} btn={btn}></NavButton>) : ''}
     </nav>
   )
 }

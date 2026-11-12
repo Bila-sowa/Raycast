@@ -1,0 +1,23 @@
+.nav-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: var(--text-meduim-weight);
+
+  a {
+    opacity: var(--font-opacity);
+  }
+
+  &-badge {
+    background: linear-gradient(90deg, #ff5b37 1%, #ab0052 100%);
+    padding: 1px 6px;
+    border-radius: 10px;
+
+    span {
+      text-align: center;
+      font-size: 0.625rem;
+      line-height: 0.13;
+      opacity: var(--font-opacity);
+    }
+  }
+}

@@ -1,22 +1,12 @@
-import { useEffect, useState } from 'react'
+import { useContext, useEffect } from 'react'
+import { AppContext } from '@/context/appContext'
+import Nav from '../Nav'
 import './BurgerMenu.scss'
 
 const BurgerMenu = () => {
-  const [isOpen, setIsOpen] = useState(false)
+  const { isOpen, setIsOpen, handleEscape } = useContext(AppContext)
 
-  const closeMenu = () => setIsOpen(false)
-
-  useEffect(() => {
-    const handleKeyDown = (e) => {
-      if (e.key === 'Escape') closeMenu()
-    }
-
-    document.addEventListener('keydown', handleKeyDown)
-
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown)
-    }
-  }, [])
+  useEffect(handleEscape, [])
 
   return (
     <div className="burger-menu">
@@ -61,9 +51,7 @@ const BurgerMenu = () => {
           )}
         </div>
       </button>
-      <nav className={`${isOpen ? '' : 'hidden'} burger-menu-content`}>
-        {/*#TODO; add nav buttons */}
-      </nav>
+      <Nav className={`${isOpen ? '' : 'hidden'} burger-menu-content`}></Nav>
     </div>
   )
 }

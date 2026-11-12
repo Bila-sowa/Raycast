@@ -32,14 +32,9 @@
 
   &-content {
     position: absolute;
-    display: flex;
-    flex-flow: row wrap;
-    align-items: self-start;
-    gap: 16px;
     inset: 0;
     padding: 60px 30px;
     min-height: 230px;
-    height: fit-content;
     background: var(--bg-color);
     z-index: 2;
     box-shadow: 2px 2px 16px #000;

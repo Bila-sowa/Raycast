@@ -2,10 +2,10 @@
   display: flex;
   align-items: center;
   gap: 6px;
-  font-weight: var(--text-meduim-weight);
+  font-weight: var(--text-medium);
 
   a {
-    opacity: var(--font-opacity);
+    color: var(--text-gray-color-1);
   }
 
   &-badge {
@@ -17,7 +17,7 @@
       text-align: center;
       font-size: 0.625rem;
       line-height: 0.13;
-      opacity: var(--font-opacity);
+      color: var(--text-gray-color-1);
     }
   }
 }

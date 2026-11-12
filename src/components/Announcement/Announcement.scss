@@ -1,0 +1,28 @@
+$announcement-bg: #1b050c;
+$announcement-border: #b83036;
+$announcement-glow: #ad282840;
+$announcement-link: #ff4365;
+
+.announcement {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background: $announcement-bg;
+  width: 350px;
+  max-width: 100%;
+  min-height: 189px;
+  padding: 24px;
+  border-radius: var(--border-radius);
+  border: 2px solid $announcement-border;
+  box-shadow: 0 0 24px $announcement-glow;
+
+  p {
+    color: var(--text-gray-color-1);
+  }
+
+  a {
+    font-weight: var(--text-medium);
+    font-size: 0.875rem;
+    color: $announcement-link;
+  }
+}

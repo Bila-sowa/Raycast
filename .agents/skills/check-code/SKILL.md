@@ -7,7 +7,7 @@ description: Manually inspect changed code for architectural, semantic, and proj
 
 ## Purpose and Philosophy
 
-Automated tools (`ESLint`, `Stylelint`, `Prettier`) catch surface-level syntax, code formatting, and standard lint warnings. They do not understand business logic, architectural constraints, test conventions, or project-specific principles codified in `AGENT.md`.
+Automated tools (`ESLint`, `Stylelint`, `Prettier`) catch surface-level syntax, code formatting, and standard lint warnings. They do not understand business logic, architectural constraints, or project-specific principles codified in `AGENT.md`.
 
 `check-code` performs a deep, human-like manual code review of modified code and applies targeted, hands-on refactoring. The agent actively inspects changed code and its surrounding context against project rules, detects semantic and structural deficiencies, and fixes them directly.
 
@@ -19,7 +19,7 @@ Automated tools (`ESLint`, `Stylelint`, `Prettier`) catch surface-level syntax, 
 - Inspect the working tree (`git status --short`, `git diff`, and `git diff --staged`) to identify changed files and hunks.
 - Keep fixes focused on changed code and directly affected functions or modules. Do not rewrite unrelated existing code in the file unless agreed with the user.
 - If fixing a flaw requires an architectural change, modifying public interfaces, or fixing pre-existing defects outside the current task's scope, present the findings and obtain user approval before proceeding.
-- When the user explicitly requests routine checking and fixing, apply verified non-architectural improvements (such as Vitest convention adjustments, error handling fixes, dead-comment removal) and report the exact diff and rationale in the final summary.
+- When the user explicitly requests routine checking and fixing, apply verified non-architectural improvements (error handling fixes, dead-comment removal) and report the exact diff and rationale in the final summary.
 
 ---
 
@@ -65,7 +65,7 @@ Manually evaluate changed code against the following criteria which automated li
 ### 3. Plan and Coordinate Fixes
 
 1. Group identified issues into:
-   - **Direct fixes**: Code style compliance, Vitest assertion patterns, removing tautological comments, adding missing variable assignments or error propagation.
+   - **Direct fixes**: Code style compliance, removing tautological comments, adding missing variable assignments or error propagation.
    - **Structural / Pre-existing issues**: Flaws in legacy code outside the diff, or changes requiring interface/architectural decisions.
 2. For direct fixes within the approved scope: proceed to apply focused edits.
 3. For structural or pre-existing issues: explain the finding to the user, outline the proposed alternative and affected files, and obtain approval before altering that code.
@@ -103,7 +103,7 @@ After applying manual fixes, run all required project verification checks:
 
 Provide a structured summary to the user:
 - **Files Inspected**: List of changed files reviewed.
-- **Deficiencies Identified Manually**: Breakdown of semantic or rule violations found (e.g. Vitest patterns, error handling, hardcoded values).
+- **Deficiencies Identified Manually**: Breakdown of semantic or rule violations found (e.g. error handling, hardcoded values).
 - **Fixes Applied**: Concrete explanation of what was changed and why.
-- **Verification Results**: Status of `check:all`, `npm test`, and `npm run build`.
+- **Verification Results**: Status of `check:all` and `npm run build`.
 - **Remaining / Out-of-Scope Items**: Any notes on pre-existing issues or recommendations left for future tasks.

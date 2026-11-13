@@ -1,11 +1,11 @@
-import { useState } from 'react'
+import { useCallback, useState } from 'react'
 
 const useBurgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false)
 
-  const closeMenu = () => setIsOpen(false)
+  const closeMenu = useCallback(() => setIsOpen(false), [])
 
-  const handleEscape = () => {
+  const handleEscape = useCallback(() => {
     const handleKeyDown = (e) => {
       if (e.key === 'Escape') closeMenu()
     }
@@ -15,7 +15,7 @@ const useBurgerMenu = () => {
     return () => {
       document.removeEventListener('keydown', handleKeyDown)
     }
-  }
+  }, [closeMenu])
 
   return {
     isOpen,

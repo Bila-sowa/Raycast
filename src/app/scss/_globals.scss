@@ -10,7 +10,6 @@ body {
   font-family: var(--font-inter);
   color: var(--text-light-color);
   background: var(--bg-color);
-  padding: 0 20px;
   position: relative;
   min-height: 100dvh;
 
@@ -31,6 +30,10 @@ body {
       transparent 75%
     );
   }
+}
+
+.content {
+  padding: 0 20px;
 }
 
 button {

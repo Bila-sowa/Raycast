@@ -1,4 +1,3 @@
-import Header from '../Header'
 import DownloadButton from '../DownloadButton'
 import Announcement from '../Announcement'
 import productSrc from '@/assets/product_1.png'
@@ -7,12 +6,12 @@ import './Hero.scss'
 const Hero = () => {
   return (
     <div className="hero">
-      <Header></Header>
       <section>
-        <img src={productSrc}></img>
+        <img src={productSrc} alt="Raycast command palette preview" />
         <h1>
           <span>Supercharged </span>
-          <br></br>productivity
+          <br />
+          productivity
         </h1>
         <p className="description">
           Raycast is a blazingly fast, totally extendable launcher. It lets you complete tasks,

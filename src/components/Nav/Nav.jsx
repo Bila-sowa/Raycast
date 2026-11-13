@@ -4,14 +4,14 @@ import './Nav.scss'
 import NavButton from '../NavButton'
 
 const Nav = (props) => {
-  const { className } = props
+  const { className, id } = props
   const { getNavButtons } = useContext(AppContext)
   const buttons = getNavButtons()
   const isHasButtons = buttons?.length > 0 && Array.isArray(buttons)
   const navClassName = ['nav', className].filter(Boolean).join(' ')
 
   return (
-    <nav className={navClassName}>
+    <nav id={id} className={navClassName}>
       {isHasButtons ? buttons.map((btn) => <NavButton key={btn.label} btn={btn}></NavButton>) : ''}
     </nav>
   )

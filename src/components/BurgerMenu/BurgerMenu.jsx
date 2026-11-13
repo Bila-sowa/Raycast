@@ -3,10 +3,12 @@ import { AppContext } from '@/context/appContext'
 import Nav from '../Nav'
 import './BurgerMenu.scss'
 
+const NAVIGATION_ID = 'primary-navigation'
+
 const BurgerMenu = () => {
   const { isOpen, setIsOpen, handleEscape } = useContext(AppContext)
 
-  useEffect(handleEscape, [])
+  useEffect(() => handleEscape(), [handleEscape])
 
   return (
     <div className="burger-menu">
@@ -15,7 +17,7 @@ const BurgerMenu = () => {
         type="button"
         aria-label={isOpen ? 'Close navigation' : 'Open navigation'}
         aria-expanded={isOpen}
-        aria-controls="primary-navigation"
+        aria-controls={NAVIGATION_ID}
         onClick={() => setIsOpen((prev) => !prev)}>
         <div className="burger-menu-button-wrapper">
           {isOpen ? (
@@ -51,7 +53,7 @@ const BurgerMenu = () => {
           )}
         </div>
       </button>
-      <Nav className={`${isOpen ? '' : 'hidden'} burger-menu-content`}></Nav>
+      <Nav id={NAVIGATION_ID} className={`${isOpen ? '' : 'hidden'} burger-menu-content`}></Nav>
     </div>
   )
 }
